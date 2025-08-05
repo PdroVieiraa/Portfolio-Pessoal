@@ -18,12 +18,13 @@
 }
 
 body {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
   font-size: 1.3rem;
 }
+
 
 header.navbar {
   background-color: var(--navbar-bg);
@@ -31,6 +32,7 @@ header.navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .navbar-container {
@@ -59,9 +61,19 @@ header.navbar {
 
 .navbar-container .nav-links a {
   text-decoration: none;
-  color: var(--text-secoundary);
-  font-weight: bold;
+  color: var(--text-secoundary); /* Cor padrão dos links */
   transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+  color: var(--primary-color); /* Cor do texto do link ativo */
+  border-bottom: 2px solid var(--primary-color); /* Traço abaixo do texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Animação suave */
+}
+
+.nav-links a:hover {
+  color: var(--primary-hover); /* Cor no hover */
 }
 
 .logo {
@@ -70,26 +82,18 @@ header.navbar {
   gap: 5px; /* Espaçamento horizontal entre os textos */
 }
 
-.logo p {
+.logo a {
   font-family: 'Bebas Neue', sans-serif; /* Fonte moderna e tech */
   font-size: 2.5rem; /* Ajusta o tamanho do texto */
   font-weight: bold; /* Deixa o texto em negrito */
   margin: 0; /* Remove margens padrão */
   transition: color 0.3s ease, transform 0.3s ease; /* Adiciona animação suave */
-}
-
-.logo{
-  color: var(--primary-color-light); /* Cor mais clara para as iniciais */
-  text-shadow: 1px 0px 1px var(--primary-color-light); /* Efeito de brilho */
-}
-
-.logo:hover {
-  transform: scale(1.1); /* Aumenta o tamanho no hover */
-  color: var(--link-hover); /* Muda a cor no hover */
+  color: var(--primary-color); 
+   text-decoration: none;
 }
 
 header.navbar .nav-links a:hover {
-  color: var(--link-hover);
+  color: var(--link-hover); /* Cor no hover */
 }
 
 
@@ -124,11 +128,19 @@ header.navbar .nav-links a:hover {
   margin-top: -20px; /* Aproxima o texto do nome */
 }
 
+.stack {
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color); /* roxo ou cor principal */
+}
+
 .frase-musica {
-  font-style: italic;
+  font-family: 'Bebas Neue', italic;
   font-size: 2rem; /* Adiciona um tamanho de fonte para melhor visibilidade */
   color: var(--text-secoundary);
-  margin-top: 10px; /* Adiciona espaçamento para separar do conteúdo acima */
+  margin-top: 30px; /* Adiciona espaçamento para separar do conteúdo acima */
 }
 
 section.resumo {
@@ -137,6 +149,7 @@ section.resumo {
 }
 
 section.resumo h2 {
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
   color: var(--primary-color);
@@ -154,6 +167,7 @@ section.resumo .btn {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 section.resumo .btn:hover {
