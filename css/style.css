@@ -1,0 +1,169 @@
+/* Variáveis globais */
+:root {
+  --background-color: #121212; /* Fundo preto */
+  --text-color: #ffffff; /* Texto branco */
+  --text-secoundary: rgb(180, 177, 177); /* Texto cinza claro */
+  --navbar-bg: #1f1f1f; /* Fundo da navbar */
+  --primary-color: rgb(140, 7, 218); /* Roxo neon */
+  --primary-color-light: rgb(170, 7, 218); /* Roxo neon mais claro */
+  --primary-hover: rgb(81, 11, 146); /* Roxo mais escuro */
+  --link-hover: rgb(81, 11, 146); /* Roxo neon para hover */
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+header.navbar {
+  background-color: var(--navbar-bg);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex; /* Define o layout como flexbox */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: space-between; /* Espaça os itens horizontalmente */
+}
+
+.navbar-container p {
+  margin: 0; /* Remove margens padrão */
+  color: var(--primary-color); /* Adiciona cor ao texto */
+  font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.navbar-container .nav-links {
+  display: flex; /* Define os links como flexbox */
+  list-style: none;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+}
+
+.navbar-container .nav-links li {
+  margin: 0 15px; /* Espaçamento horizontal entre os links */
+}
+
+.navbar-container .nav-links a {
+  text-decoration: none;
+  color: var(--text-secoundary);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logo {
+  display: flex; /* Define o layout como flexbox */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 5px; /* Espaçamento horizontal entre os textos */
+}
+
+.logo p {
+  font-family: 'Bebas Neue', sans-serif; /* Fonte moderna e tech */
+  font-size: 2.5rem; /* Ajusta o tamanho do texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin: 0; /* Remove margens padrão */
+  transition: color 0.3s ease, transform 0.3s ease; /* Adiciona animação suave */
+}
+
+.logo{
+  color: var(--primary-color-light); /* Cor mais clara para as iniciais */
+  text-shadow: 1px 0px 1px var(--primary-color-light); /* Efeito de brilho */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Aumenta o tamanho no hover */
+  color: var(--link-hover); /* Muda a cor no hover */
+}
+
+header.navbar .nav-links a:hover {
+  color: var(--link-hover);
+}
+
+
+.hero {
+  text-align: center;
+  padding: 70px 40px;
+  background: linear-gradient(135deg, var(--navbar-bg), #2c2c2c);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  padding: 50px 20px;
+}
+
+.hero-text {
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15rem; /* Tamanho do nome */
+  color: var(--primary-color);
+  margin-bottom: 0; /* Remove o espaçamento abaixo do nome */
+  line-height: 1;
+}
+
+.slogan {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem; /* Tamanho do texto "Hello World!" */
+  color: var(--primary-color);
+  margin-top: -20px; /* Aproxima o texto do nome */
+}
+
+.frase-musica {
+  font-style: italic;
+  font-size: 2rem; /* Adiciona um tamanho de fonte para melhor visibilidade */
+  color: var(--text-secoundary);
+  margin-top: 10px; /* Adiciona espaçamento para separar do conteúdo acima */
+}
+
+section.resumo {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section.resumo h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+section.resumo p {
+  margin-bottom: 20px;
+}
+
+section.resumo .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+section.resumo .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+footer.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
